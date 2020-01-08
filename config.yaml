@@ -1,0 +1,40 @@
+---
+title: "Muhammet Sait"
+baseURL: "https://muhammetsait.com/"
+theme: "zen"
+languageCode: "ar"
+defaultContentLanguage: "ar"
+pluralizelisttitles: false
+removePathAccents: true
+paginate: 10
+paginatePath: "page"
+rssLimit: 20
+author:
+  name: "Muhammet Sait"
+  url: "https://muhammetsait.com"
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home: ["HTML","RSS", "JSON"]
+  section: ["HTML","RSS", "JSON"]
+
+params:
+  contact: "msaied93@gmail.com"
+  copyright: "Powered by [Hugo](https://gohugo.io/)"
+  favicon: "icon-64.png"
+  feedlinks: true
+  icon: "apple-touch-icon-180.png"
+  image: "apple-touch-icon-180.png"
+  imageMaxWidth: 400
+  jquery: true
+  mobileMenu: true
+  poweredby: false
+  search: true
+  searchSize: 20
+  sidebar: true
+  submitted: true
