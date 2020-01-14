@@ -23,22 +23,15 @@
 // can add them to the font variables in the _init.scss partial.
 
 @font-face {
-  font-family: 'DIN Next';
-  src: url('../fonts/dinnext.woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Dubai';
-  src: url('../fonts/dubai.woff');
+  font-family: 'Noto Naskh Arabic UI';
+  src: url('../fonts/NotoNaskhArabicUI-Regular.woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Dubai';
-  src: url('../fonts/dubai-bold.woff');
+  font-family: 'Noto Naskh Arabic UI';
+  src: url('../fonts/NotoNaskhArabicUI-Bold.woff');
   font-weight: bold;
   font-style: normal;
 }

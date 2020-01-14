@@ -1,3 +1,11 @@
 // sass-lint:disable no-css-comments, no-color-hex, no-color-literals
 
 // Site custom styles
+hr {
+  opacity: .2;
+  border-width: 0 0 5px 0;
+  border-style: dashed;
+  background: transparent;
+  width: 50%;
+  margin: 1.8em auto;
+}
