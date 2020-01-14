@@ -9,3 +9,18 @@ hr {
   width: 50%;
   margin: 1.8em auto;
 }
+
+.content a {
+    text-decoration: none;
+    box-shadow: inset 0 -4px 0 0 #41d3bd;
+    &:hover {
+        box-shadow: inset 0 -1.2em 0 #41d3bd;
+    }
+}
+
+h1,
+h2,
+h3,
+th {
+    font-weight: 900;
+}
