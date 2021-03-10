@@ -9,7 +9,7 @@ date: 2021-03-10
 
 ### # [String.prototype.replaceAll](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
 
-تأخذ هذه الدالة بارامترين، وتبحث ضمن السلسلة المحرفية عن كافة الأماكن التي ورد فيها البارامتر الأول وتستبدله بقيمة البارامتر الثاني. البارامتر الأول عبارة عن نمط بحث، قد يكون سلسلة محرفية أو تعبير منتظم [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) يستخدم للبحث. البارامتر الثاني قد يكون سلسلة نصية أو دالة يتم تنفيذها عند كل حالة مطابقة يعثر عليها.
+تأخذ هذه الدالة بارامترين، وتبحث ضمن السلسلة المحرفية عن كافة الأماكن التي ورد فيها البارامتر الأول وتستبدله بقيمة البارامتر الثاني. البارامتر الأول عبارة عن نمط بحث، قد يكون سلسلة محرفية أو تعبيراً منتظماً [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) يستخدم للبحث. البارامتر الثاني قد يكون سلسلة نصية أو دالة يتم تنفيذها عند كل حالة مطابقة يعثر عليها.
 
 تعيد دالة `replaceAll` ناتج الاستبدال في سلسلة تصية جديدة، أما السلسلة الأصلية فلا تجري عليها أي تغييرات.
 
@@ -22,7 +22,7 @@ const p = 'Almost before we knew it, we had left the ground.';
 console.log(p.replaceAll('we', 'they'));
 // expected output: "Almost before they knew it, they had left the ground."
 
-// global flag (g) id required when calling replaceAll with regex
+// global flag (g) is required when calling replaceAll with regex
 // ignore case flag (i) is also used in this example
 const regex = /a/ig;
 p.replaceAll(regex, (a, b, c) => {console.log(a, b);})
@@ -59,7 +59,7 @@ Promise.any(promises).then((value) => console.log(value));
 
 ### # [WeakRefs](https://github.com/tc39/proposal-weakrefs)
 
-هذا التعديل أضاف كائنين جديدين هما [`WeakRef`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) و [`FinalizationRegistry`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry). يمكن استخدام هذين الكائنين للتحكم بعملية إدارة الذاكرة والتعامل مع جامع القمامة إلى حد ما. بشكل عام لا ينصح باستخدامهما إلا في حالات خاصة جداً، وهما موجهان للمكتبات وليس للاستخدام في أكواد التطبيقات.
+هذا التعديل أضاف كائنين جديدين هما [`WeakRef`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) و [`FinalizationRegistry`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry). يمكن استخدام هذين الكائنين للتحكم بعملية إدارة الذاكرة والتعامل مع جامع القمامة إلى حد ما. بشكل عام لا ينصح باستخدامهما إلا في حالات خاصة جداً ولا تظهر الحاجة لهما في أكواد التطبيقات.
 
 ### # [Logical Assignment Operators](https://github.com/tc39/proposal-logical-assignment/)
 
