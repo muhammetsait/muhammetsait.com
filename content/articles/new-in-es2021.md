@@ -3,15 +3,6 @@ title: "الجديد في إكماسكريبت 2021"
 date: 2021-03-10
 ---
 
-<style>
-html, body {
-  direction: rtl;
-}
-pre, code {
-  direction: ltr;
-}
-</style>
-
 # إضافات ES2021
 
 ## # [String.prototype.replaceAll](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
@@ -105,3 +96,12 @@ let message = 0xA0_B0_C0; // with Hex values
 
 let budget = 1_000_000_000_000n; // with BigInt number
 ```
+
+<style>
+html, body {
+  direction: rtl;
+}
+pre, code {
+  direction: ltr;
+}
+</style>
