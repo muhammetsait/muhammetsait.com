@@ -1,11 +1,13 @@
 ---
-title: "الجديد في إكماسكريبت 2021"
+title: "الجديد في إكماسكربت 2021"
 date: 2021-03-10
 ---
 
-# إضافات ES2021
+نستعرض هنا ملخصاً شاملاً للمقترحات الجديدة التي دخلت على توصيف لغة إكماسكربت، الذي يعتبر المعيار القياسي الذي تتوافق معه جافاسكربت، عام 2021. هذه المقالة ستكون جزءاً من مجموعة تغطي مجمل الإضافات والتعديلات الداخلة على جافاسكربت حديثاً.
 
-## # [String.prototype.replaceAll](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
+## إضافات ES2021
+
+### # [String.prototype.replaceAll](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
 
 تأخذ هذه الدالة بارامترين، وتبحث ضمن السلسلة المحرفية عن كافة الأماكن التي ورد فيها البارامتر الأول وتستبدله بقيمة البارامتر الثاني. البارامتر الأول عبارة عن نمط بحث، قد يكون سلسلة محرفية أو تعبير منتظم [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) يستخدم للبحث. البارامتر الثاني قد يكون سلسلة نصية أو دالة يتم تنفيذها عند كل حالة مطابقة يعثر عليها.
 
@@ -29,7 +31,7 @@ p.replaceAll(regex, (a, b, c) => {console.log(a, b);})
 // "a" 30
 ```
 
-## # [Promise.any](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
+### # [Promise.any](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
 
 تأخذ هذه الدالة مجموعة كائنات وعود ([`Pormise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) objects) وترجع وعداً جديداً. يتحقق الوعد الجديد عندما يتحقق أول وعد من المجموعة المدخلة ويعيد قيمته نفسها.
 
@@ -46,7 +48,7 @@ Promise.any(promises).then((value) => console.log(value));
 // expected output: "quick"
 ```
 
-وبذلك يصبح لدينا أربع دوال تجميع للوعود في إكماسكريبت. كما في الجدول التالي:
+وبذلك يصبح لدينا أربع دوال تجميع للوعود في إكماسكربت. كما في الجدول التالي:
 
 | الدالة | وصف       | إصدار |
 | -------------------- | ----------------------------------------------- | ------ |
@@ -55,11 +57,11 @@ Promise.any(promises).then((value) => console.log(value));
 | `Promise.race`       | تنتهي عند تحقق أو رفض أول وعد                   | ES2015 |
 | `Promise.any`        | تنتهي عند تحقق أول وعد                          | ES2021 |
 
-## # [WeakRefs](https://github.com/tc39/proposal-weakrefs)
+### # [WeakRefs](https://github.com/tc39/proposal-weakrefs)
 
 هذا التعديل أضاف كائنين جديدين هما [`WeakRef`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) و [`FinalizationRegistry`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry). يمكن استخدام هذين الكائنين للتحكم بعملية إدارة الذاكرة والتعامل مع جامع القمامة إلى حد ما. بشكل عام لا ينصح باستخدامهما إلا في حالات خاصة جداً، وهما موجهان للمكتبات وليس للاستخدام في أكواد التطبيقات.
 
-## # [Logical Assignment Operators](https://github.com/tc39/proposal-logical-assignment/)
+### # [Logical Assignment Operators](https://github.com/tc39/proposal-logical-assignment/)
 
 عوامل الإسناد المنطقية هي مجموعة عوامل تسمح باختصار بعض تعليمات الإسناد إلى شكل أقصر مع تحسين الأداء بشكل طفيف (لكن لا يغرنك الmicro-optimization). في المثال التالي، وضعنا كل تعليمة إسناد جديدة ويليها تعليمتين قديمتين: الأولى مكافئة تماماً، والثانية مكافئة في الناتج ولكنها تسبب عملية إسناد زائدة أحياناً.
 
@@ -79,7 +81,7 @@ a ?? (a = b);
 a = a ?? b;
 ```
 
-## # [Numeric separators](https://github.com/tc39/proposal-numeric-separator)
+### # [Numeric separators](https://github.com/tc39/proposal-numeric-separator)
 
 أضيفت إمكانية استخدام الشرطة السفلية ( `_` ) للفصل بين الخانات عند تعريف الأعداد والثوابت، بهدف تسهيل قرائتها على المبرمج.
 
