@@ -51,6 +51,16 @@ const bigNum = 1000n;
 const bigNum2 = BigInt("2000");
 ```
 
+يمكن استخدام العوامل الحسابية `+` `-` `*` `/` `**` على الأعداد من نوع `BigInt`، بشرط أن يكون الطرفين من النوع نفسه وعدم الخلط مع `Number`. انتبه أيضاً إلى أن دوال الصنف `Math` كلها غير متوافقة مع BigInt.
+
+أما المقارنة المنطقية بين BigInt و Number فهي ممكنة.
+
+```javascript
+100n == 100 // true
+100n < 200  // true
+5n > 7      //false
+```
+
 ### # [Promise.allSettled](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 
 تأخذ هذه الدالة مجموعة كائنات وعود ضمن كائن مكرر (مثل مصفوفة) وتعيد وعداً جديداً. تحسم نتيجة الوعد الجديد عندما تحسم (settle) نتائج كل الوعود المدخلة إما بالتحقق fulfill  أو الرفض reject.
