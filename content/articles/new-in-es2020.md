@@ -9,7 +9,7 @@ date: 2021-03-12
 
 ### # [String.prototype.matchAll](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
 
-تستقبل هذه الدالة تعبيراً منتظماً [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) وتعيد مكرراً [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) يمكننا من الوصول لكافة نتائج مطابقة التعبير المنتظم في السلسلة المحرفية. يجب أن يستعمل التعبير المنتظم المستخدم في البحث رمز `g`، وإذا تم تمرير كائن من آخر فسيتم تحويله إلى تعبير منتظم باستدعاء الباني <code>new RegExp()&lrm;</code>.
+تستقبل هذه الدالة تعبيراً منتظماً [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) وتعيد مكرراً [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) يمكننا من الوصول لكافة نتائج مطابقة التعبير المنتظم في السلسلة المحرفية. يجب أن يستعمل التعبير المنتظم المستخدم في البحث رمز `g`، وإذا تم تمرير كائن من نوع آخر فسيتم تحويله إلى تعبير منتظم باستدعاء الباني <code>new RegExp()&lrm;</code>.
 
 يمكن معالجة النتائج عبر حلقة [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) على المكرر، أو بتحويله إلى مصفوفة عادية باستخدام عامل النشر [`...`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) أو الدالة [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
@@ -30,7 +30,7 @@ Array.from(str.matchAll(/comp[a-z]*/g))
 
 دالة الاستيراد الديناميكي، هي دالة جديدة تسمح باستيراد الملفات بنفس أسلوب تعليمة `import` ولكن مع بعض الاختلافات:
 
-- السماح باستخدام القوالب الحرفية بالإضافة للسلاسل النصية العادية، هذا يسمح باستيراد أكواد مختلفة ديناميكياً اعتماداً على قيم بعض المتغيرات، كاختلاف لغة التطبيق على سبيل المثال:
+- السماح باستخدام القوالب الحرفية بالإضافة للسلاسل النصية العادية، هذا يسمح باستيراد أكواد مختلفة ديناميكياً اعتماداً على قيم بعض المتغيرات، كاختلاف لغة الواجهة على سبيل المثال:
 
   ```javascript
   import(`./language-packs/${langCode}.js`)
@@ -44,7 +44,7 @@ Array.from(str.matchAll(/comp[a-z]*/g))
 
 ### # [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 
-كائن يسمح بتمثيل الأعداد الصحيحة الأكبر من الحجم الأقصى الذي يمكن تخزينه في المتغيرات من نوع [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)، أي التي تزيد عن &lrm;2^53^-1&lrm;. يمكنك إنشاء كائن BigInt جديد بإضافة حرف `n` إلى نهاية الرقم، أو باستدعاء دالة البناء <code>BigInt()&lrm;</code>.
+كائن يسمح بتمثيل الأعداد الصحيحة الأكبر من الحجم الأقصى الذي يمكن تخزينه في المتغيرات من نوع [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)، أي التي تزيد عن &lrm;2<sup>53</sup>-1&lrm;. يمكنك إنشاء كائن BigInt جديد بإضافة حرف `n` إلى نهاية الرقم، أو باستدعاء دالة البناء <code>BigInt()&lrm;</code>.
 
 ```javascript
 const bigNum = 1000n;
@@ -78,11 +78,11 @@ Promise.allSettled([promise1, promise2, promise3]).then((values) => {
 
 ### # [globalThis](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
 
-هذه القيمة تشير دوماً إلى الكائن العام `this`، أي أنها تمثل كائن `window` في المتصفحات، وكائن `self` في عاملات الويب [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)، وكائن `global` في Node.js.
+هذه القيمة تشير دوماً إلى الكائن العام `this`، أي أنها تشير إلى كائن `window` في المتصفحات، وكائن `self` في عاملات الويب [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)، وكائن `global` في Node.js.
 
 ### # [for-in mechanics](https://github.com/tc39/proposal-for-in-order)
 
-تمت إعادة النظر في ترتيب التكرار على الكائنات عند استخدام حلقة [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in). في البيئات التنفيذية المتوافقة مع هذا التعديل، ستتوافق حلقة for-in مع الطرق الأخرى عند التكرار على الكائنات بدلاً من المعيار القديم حيث كان سلوك for-in مفتوحاً للتطبيق بصور مختلفة بين المتصفحات والبيئات المختلفة.
+أعيد النظر في ترتيب التكرار على الكائنات عند استخدام حلقة [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in). في البيئات التنفيذية المتوافقة مع هذا التعديل، ستتوافق حلقة for-in مع الطرق الأخرى عند التكرار على الكائنات بدلاً من المعيار القديم حيث كان سلوك for-in مفتوحاً للتطبيق بصور مختلفة بين المتصفحات والبيئات المختلفة.
 
 بشكل عام، حلقة `for...in` هي من التعليمات التي يفضل تجنبها بشكل كامل بسبب فائدتها المحدودة وتوفر تعمليات بديلة أفضل منها، مثل [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) و [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach). 
 
@@ -112,7 +112,7 @@ a == null ? undefined : a()
 
 عامل استبدال المتغيرات غير المعرفة ( `??` )، يمكنك من استبدال قيمة المتغير بقيمة أخرى إذا وفقط إذا كانت قيمة المتغير هي null أو undefined.
 
-يعمل هذا العامل بشكل مشابه لعامل (أو) المنطقية `||`، لكنه لا يستبدل القيم المعرفة التي تحول إلى قيمة false منطقية. يعني، قيم 0 أو السلسلة النصية الفارغة وغيرها من القيم لا تستبدل مع عامل `??`.
+يعمل هذا العامل بشكل مشابه لعامل (أو) المنطقية `||`، لكنه لا يستبدل القيم المعرفة التي تحول إلى قيمة false منطقية. يعني، قيم 0 أو السلسلة النصية الفارغة وغيرها من القيم الخاطئة منطقياً falsey لا تستبدل مع عامل `??`.
 
 ```javascript
 const a = null ?? 'default string';
@@ -136,7 +136,7 @@ console.log(c);
 
 ```javascript
 <script type="module">
-import './index.mjs?someURLInfo=5';
+import './index.mjs?someURLInfo=5'
 </script>
 
 
@@ -162,6 +162,7 @@ html, body {
 }
 pre, code {
   direction: ltr;
+  text-align: left;
 }
 </style>
 
