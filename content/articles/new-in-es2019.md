@@ -3,6 +3,13 @@ title: "الجديد في إكماسكربت 2019"
 date: 2021-03-27
 ---
 
+نستعرض هنا ملخصاً للتعديلات الجديدة على توصيف إكماسكربت عام 2019، هذه المقالة جزء من مجموعة تغطي مجمل الإضافات والتعديلات الداخلة على المعيار القياسي للغة جافاسكربت في السنوات الماضية.
+
+[تعديلات إكماسكربت عام 2020](https://muhammetsait.com/articles/new-in-es2020/)
+
+[تعديلات إكماسكربت عام 2021](https://muhammetsait.com/articles/new-in-es2021/)
+
+
 ## إضافات ES2019
 
 ### # [Object.fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
@@ -91,7 +98,7 @@ Symbol().description;        // undefined
 
 ### # [مراجعة Function.prototype.toString](https://2ality.com/2016/08/function-prototype-tostring.html)
 
-تعديل على طريقة عمل دالة `toString` عند استدعائها على الدوال. الهدفين الأساسيين هما إعادة النص المصدري للدالة في حال كان ذلك ممكناً، بصيغة سليمة وقابلة للتنفيذ. الهدف الثاني، في حال تعذر إعادة شفرة برمجية سليمة، يجب إعادة سلسلة غير صالحة نحوياً، أي أنها ستسبب `SyntaxError` في حال محاولة تنفيذها باستخدام [`eval`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
+تعديل على طريقة عمل دالة `toString` عند استدعائها على الدوال. الهدفان الأساسيان هما إعادة النص المصدري للدالة في حال كان ذلك ممكناً، بصيغة سليمة وقابلة للتنفيذ. الهدف الثاني، في حال تعذر إعادة شفرة برمجية سليمة، يجب إعادة سلسلة غير صالحة نحوياً، أي أنها ستسبب `SyntaxError` في حال محاولة تنفيذها باستخدام [`eval`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 
 ### # [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify)
