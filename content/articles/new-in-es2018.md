@@ -352,4 +352,15 @@ p.finally(function() {
 
 ### # [Asynchronous Iteration](https://2ality.com/2016/10/asynchronous-iteration.html)
 
-إضافة المكررات غير المتزامنة. هناك [مقالة تشرحها على أكاديمية حسوب](https://academy.hsoub.com/programming/javascript/%D8%A7%D9%84%D9%85%D9%83%D8%B1%D8%B1%D8%A7%D8%AA-iterators-%D9%88%D8%A7%D9%84%D9%85%D9%88%D9%84%D8%AF%D8%A7%D8%AA-generators-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%AA%D8%B2%D8%A7%D9%85%D9%86%D8%A9-%D9%81%D9%8A-%D8%AC%D8%A7%D9%81%D8%A7%D8%B3%D9%83%D8%B1%D8%A8%D8%AA-r923/). 
+إضافة المكررات غير المتزامنة. هناك [مقالة تشرحها على أكاديمية حسوب](https://academy.hsoub.com/programming/javascript/%D8%A7%D9%84%D9%85%D9%83%D8%B1%D8%B1%D8%A7%D8%AA-iterators-%D9%88%D8%A7%D9%84%D9%85%D9%88%D9%84%D8%AF%D8%A7%D8%AA-generators-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%AA%D8%B2%D8%A7%D9%85%D9%86%D8%A9-%D9%81%D9%8A-%D8%AC%D8%A7%D9%81%D8%A7%D8%B3%D9%83%D8%B1%D8%A8%D8%AA-r923/).
+
+
+<style>
+html, body {
+  direction: rtl;
+}
+pre, code {
+  direction: ltr;
+  text-align: left;
+}
+</style>
